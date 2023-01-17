@@ -90,7 +90,10 @@ export const TodoTask = styled(TodoTaskRaw)`
 
   &[data-status='completed'] {
     text-decoration: line-through;
-    opacity: 0.4;
+    & *:not(${CheckBox}) {
+      opacity: 0.4;
+    }
+    border-color: #0002
   }
 
   &[data-status='incompleted'] {
